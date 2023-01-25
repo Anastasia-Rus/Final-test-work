@@ -1,13 +1,14 @@
 ﻿using System;
 using static System.Console;
-
 Clear();
-
-string[] Method1(string[] input, int x) {
+string[] Method1(string[] input, int x) 
+{
     string[] output = new string[Method2(input,x)];
 
-    for(int i = 0, j = 0; i < input.Length; i++) {
-        if(input[i].Length <= x) {
+    for(int i = 0, j = 0; i < input.Length; i++) 
+    {
+        if(input[i].Length <= x) 
+        {
             output[j] = input[i];
             j++;
         }
@@ -15,18 +16,22 @@ string[] Method1(string[] input, int x) {
 
     return output;
 }
-int Method2(string[] input, int x) {
+int Method2(string[] input, int x) 
+{
     int count = 0;
 
-    for(int i = 0; i < input.Length; i++) {
-        if(input[i].Length <= x) {
+    for(int i = 0; i < input.Length; i++) 
+    {
+        if(input[i].Length <= x) 
+        {
             count++;
         }
     }
 
     return count;
 }
-string[] Array() {
+string[] Array() 
+{
     Write("Введите значения массива через пробел: ");
     return ReadLine().Split(" ");
 }
